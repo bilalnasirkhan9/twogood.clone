@@ -1,0 +1,673 @@
+@font-face {
+    font-family: futura;
+    src: url(font/Futura-Bold.ttf); 
+}
+
+@font-face {
+    font-family: helvetical;
+    src: url(font/HelveticaNowText-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background-color: black;
+    color: white;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    
+    background-color: #F7F7F7;
+    padding: 0 22px;
+}
+
+#page1{
+    padding-top: 20vh;
+    min-height: 100vh;
+    width: 100%;
+   
+    
+}
+/* <________________________________________ Navbar Styles ___________________________________________> */
+#header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: futura;
+    padding: 20px 30px
+
+}
+
+#logo{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 5.4vw;transition: all ease-in-out 0.2s;
+  overflow: hidden;
+}
+
+#logo h3{
+    line-height: 1.8vw;
+    font-size: 2.1vw;
+    font-weight: 900;
+}
+
+#logo img{
+  padding-top: 10px;
+  width: 4vw;
+}
+
+#floting{
+  width: 100%;
+
+}
+
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#links>a{
+    font-size: 0.8vw;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: helvetical;
+    margin: 0px 35px;
+}
+
+
+#links>a>img{
+  width: 10px;
+  transition: ease-out 0.50s;
+  margin-left: 5px;
+}
+#links>a:hover img{
+transform: rotate(45deg);
+}
+
+
+#links>a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.737);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#links>a:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#links a:hover {
+ color: rgba(0, 0, 0, 0.737);
+}
+
+#menu_btn{
+  width: 125px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F7F7F7;
+  border-radius: 30px;
+  padding: 0px 18px;
+}
+
+.menu_icon>i{
+   font-size: 1.20vw;
+   margin: 0px 20px; 
+}
+
+.menu_icon>a{
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+.menu_icon>a>img{
+  width: 25px;
+  height: 10px;
+  margin-bottom: 1px;
+  opacity: 0.70;
+}
+
+.cart_icon>a>img{
+  width: 20px;
+  margin-top: 5px;
+  transition: ease-out 0.50s;
+  
+}
+
+.cart_icon>a:hover img{
+  transform: rotate(-7deg);
+  
+}
+
+/* <________________________________________ Navbar Styles ___________________________________________> */
+
+
+/* <_______________________________________________ Hero Section ___________________________________________> */
+
+#page2{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: helvetical;
+  text-transform: uppercase;
+}
+
+.elem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32.5%;
+  height: 100vh;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#page2>.elem>img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+#hero_section{
+  line-height: 13.5vw;
+  margin-top: 115px;
+  padding-bottom: 15px;
+}
+
+#hero_section h1{
+  font-family: futura;
+  font-size: 16vw;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+.bounding{
+  width: 100%;
+  height: 100%; 
+}
+
+.bounding_coupound{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#featured_video{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#featured_video>#video_play{
+  padding: 2.5vw 1.8vw;
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  font-family: futura;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  scale: 0;
+}
+
+#featured_video>video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.page_top_border{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid black;
+    font-family: helvetical;
+}
+
+.page_top_border>h5{
+    text-transform: uppercase;
+    padding: 3px 5px;
+    font-size: 0.80vw;
+    font-weight: 700;
+    opacity: 0.80;
+
+}
+
+
+.carousel_slider{
+  width: 310px;
+  height: 50px;
+  position: absolute;
+  z-index: 200;
+  overflow: hidden;
+  background-color: #C3D8C5; 
+  text-align: center;
+  border-radius: 25px;
+  transition: ease-in-out 0.1s;
+  transition-duration: 0.2s;
+  margin-bottom:0;
+  text-transform: uppercase;
+}
+
+
+.carousel_slider:hover{
+  height: 230px;
+  margin-bottom: -180px;
+  border-radius: 25px;
+}
+
+.nav_carousel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 32px;
+}
+
+.side_circle{
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.carousel_dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.carousel_dropdown>li{
+  list-style: none;
+  padding: 0px 13px;
+  font-size: 0.85vw;
+}
+
+.carousel_text_bold{
+  font-weight: 600;
+  font-size: 0.75vw;
+  opacity: 0.90;
+}
+
+#carousel_explore_icon>i{
+  font-size: 0.90vw;
+}
+
+.carousel_panel{
+  padding-top: 30px;
+  display: flex;
+  width: 100%;
+  height: 200px;
+}
+
+.carousel_info_left{
+  width: 50%;
+  height: 100%;
+}
+
+.carousel_info_left img{
+  width: 120px;
+}
+
+.carousel_info_left h1{
+  font-size: 12px;
+  opacity: 0.70;
+}
+
+.carousel_info_right>img{
+  width: 120px;
+}
+
+.carousel_info_right{
+  width: 50%;
+  height: 100%;
+}
+
+.carousel_info_right{
+  height: 120px;
+}
+
+.carousel_info_right h1{
+  font-size: 12px;
+  opacity: 0.70;
+}
+
+
+/* <______________________________________________ Hero Section End ________________________________________> */
+
+
+/* <________________________________________ Belive Section Start ________________________________________> */
+
+.beleive_text{
+  padding-top: 60px;
+  display: flex;
+  font-family: futura;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+}
+
+.beleive_text h2{
+  padding-right: 230px;
+  line-height: 4rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.beleive_para{
+  width: 40%;
+  font-size: 1.1rem;
+  font-family: helvetical;
+}
+
+.beleive_para p{
+  padding-bottom: 40px;
+  width: 60%;
+  letter-spacing: 0.04rem;
+}
+
+.animated_btn {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  
+}
+
+.animated_btn img{
+  margin-left: 12px;
+  width: 12px;
+  transition: ease-out 0.10s;
+}
+
+.animated_btn:hover img{
+  transform: rotate(45deg);
+  opacity: 0.90;
+}
+
+.animated_btn:hover {
+  opacity: 0.90;
+}
+
+.animated_btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  bottom: -2px;
+  left: 0;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
+
+.animated_btn:hover::before {
+  transform: scaleX(1);
+  
+}
+
+
+/* <________________________________________ Belive Section End ________________________________________> */
+
+/* <________________________________________ Items_cart Section Start ________________________________________> */
+
+#page3 {
+  width: 100%;
+  min-height: 300vh;
+  font-family: helvetical;
+  position: relative;
+  overflow: hidden;
+}
+
+#cart_items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 300vh;
+}
+
+.cart_cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 90vh;
+  margin: 0 40px;
+  background-color: red;
+}
+
+.cart_cont img{
+  object-position: center;
+  height: 85%;
+}
+
+
+
+
+/* <________________________________________ Items_cart Section End ________________________________________> */
+
+
+/* <________________________________________ Love & Support Section Start ________________________________________> */
+
+#page4{
+  width: 100%;
+  height: 100vh;
+  font-family: futura;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px 0px;
+}
+
+#page4>h1{
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+/* <________________________________________ Love & Support Section End ________________________________________> */
+
+
+
+/* <________________________________________ Our Impact Section Start ________________________________________> */
+
+#page5{
+  width: 100%;
+  height: 100vh;
+}
+
+.impact_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.impact_item img{
+  width: 100%;
+}
+
+#impact_content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#impact_content h4{
+  text-transform: uppercase;
+  font-family: futura;
+  font-size: 2rem;
+}
+
+#impact_content p{
+  line-height: 1.7rem;
+  padding: 25px 0px;
+  width: 70%;
+  font-size: 1.1rem;
+  font-family: helvetical;
+}
+#impact_content img {
+  width: 10px;
+}
+
+/* <________________________________________ Our Impact Section End ________________________________________> */
+
+/* <________________________________________ Footer Start________________________________________> */
+
+
+#page6{
+  width: 100%;
+  height: 90vh;
+
+}
+
+#footer{
+  width: 100%;
+  height:80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: helvetical;
+}
+
+#connect h4{
+  opacity: 0.60;
+  letter-spacing: 0.08rem;
+}
+
+#connect ul{
+  list-style: none;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#connect li:hover{
+  opacity: 0.60;
+  cursor: pointer;
+}
+
+#privacy{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#privacy_logo_img{
+  width: 200px;
+  height: 200px;
+  margin: 20px 0px;
+}
+
+#privacy_logo_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#privacy ul{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 30px 0px;
+}
+
+#privacy li:hover{
+  opacity: 0.60;
+  cursor: pointer;
+}
+
+#privacy p{
+  text-align: center; /* Set text alignment to left if needed */
+  margin: 0 auto; /* Center the paragraph horizontally using margin */
+  max-width: 100%;
+}
+
+
+#grittes h4{
+  opacity: 0.60;
+  letter-spacing: 0.08rem;
+}
+
+#grittes ul{
+  list-style: none;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#grittes li:hover{
+  opacity: 0.60;
+  cursor: pointer;
+}
+
+
+
+/*_____________________________________ Footer End________________________________________> */
+
+#created{
+  font-family: helvetical;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.60;
+  padding: 15px 0px;
+}
+
