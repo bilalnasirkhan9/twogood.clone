@@ -465,7 +465,6 @@ transform: rotate(45deg);
   font-family: helvetical;
   position: relative;
   overflow: hidden;
-  background-color: green;
 }
 
 #cart_items{
@@ -484,8 +483,6 @@ transform: rotate(45deg);
   align-items: center;
   width: 40%;
   height: 90vh;
-
-  background-color: red;
 }
 
 .cart_cont img{
