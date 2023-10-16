@@ -88,6 +88,13 @@ gsap.from("#privacy_logo_img",{
 })
 
 function nav_Animation() {
+
+  gsap.from("#logo h3", {
+    y: -105,
+    delay: 0.2,
+    duration: 0.5,
+  })
+
   gsap.from("#links a", {
     y: -25,
     delay: 0.3,
