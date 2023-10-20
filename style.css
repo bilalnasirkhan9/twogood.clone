@@ -256,7 +256,7 @@ html {
   margin-right: 3px;
   margin-top: 50px;
   margin-bottom: 20px;
-  border-bottom: 1.5px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.712);
   font-family: helvetical;
 }
 
@@ -457,7 +457,7 @@ html {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  height: 300vh;
+  height: 300vh
 }
 
 .cart_cont {
@@ -493,18 +493,99 @@ html {
 
 #page4 {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   font-family: futura;
+  position: relative;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+
+.goodness_cont {
+  display: flex;
+  height: 17vh;
+  width: auto;
+  overflow: hidden;
+  align-items: flex-end;
+  font-family: helvetical;
+}
+
+.goodness_card {
+  height: 150px;
+  width: 230px;
+  margin: 0 26px;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.goodness_card h2{
+  padding-top: 20px;
+  letter-spacing: 1.2px;
+  font-weight: 300;
+}
+
+.goodness_card:hover{
+  opacity: 0.90;
+}
+
+.side_circle2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+
+#client_comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 90vh;
+  line-height: 4.2rem;
+
+}
+
+.bounding_h3{
+  height: fit-content;
+  overflow: hidden;
+}
+
+#client_comment h3{
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+}
+
+#get_message{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin: 20px 0px;
+  height: 55px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-size: 0.50rem;
+  padding: 0px 60px;
+  margin-top: 50px;
+  letter-spacing: 2px;
+  font-family: helvetical;
 }
 
-#page4 > h1 {
-  font-size: 6rem;
-  text-transform: uppercase;
+#get_message:hover{
+  color: rgba(255, 255, 255, 0.829);
+  cursor: pointer;
+}
+
+#client_comment h6{
+  margin-top: 30px;
+  line-height: 1.4rem;
+  font-size: 1rem;
+  font-family: helvetical;
+  text-align: center;
+  text-transform: initial;
+  font-weight: 300;
 }
 
 /* <________________________________________ Love & Support Section End ________________________________________> */
@@ -514,7 +595,7 @@ html {
 #page5 {
   width: 100%;
   height: 100vh;
-}
+} 
 
 .impact_container {
   display: grid;
@@ -552,6 +633,63 @@ html {
 }
 
 /* <________________________________________ Our Impact Section End ________________________________________> */
+
+
+/* <________________________________________ Email_Section Start ________________________________________> */
+
+.email_sec{
+  margin: 20px 0px;
+  width: 100%;
+  height: 11vh;
+}
+
+.email_sec input{
+  width: 100%;
+  height: 10vh;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: futura;
+  outline: none;
+  background-color: #f7f7f7;
+  display: flex;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form img{
+  width: 190px;
+  height: 85px;
+  position: absolute;
+  left: 46.7%; 
+  margin-bottom: 15px;
+}
+
+
+/* Remove autofill background color */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #f7f7f7 inset;
+  -webkit-text-fill-color: initial !important;
+}
+
+
+#radioInput1::placeholder{
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+#sent_icon{
+  font-size: 1.8rem;
+}
+
+
+/* <________________________________________ Email_Section End ________________________________________> */
 
 /* <________________________________________ Footer Start________________________________________> */
 
@@ -603,8 +741,7 @@ html {
 }
 
 #privacy_logo_img img {
-  width: 100%;
-  height: 100%;
+  width: 75%;
   object-fit: cover;
   object-position: center;
 }
