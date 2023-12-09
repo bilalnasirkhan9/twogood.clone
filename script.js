@@ -159,6 +159,8 @@ videoPlayBtn();
 
 const goodnessCards = document.querySelectorAll('.goodness_card');
 const goodnessCont = document.querySelector('.goodness_cont');
+const circleanim = document.querySelector(".side_circle2");
+const circlebhai = document.getElementsByClassName('bound_h3_1')
 const cardCount = goodnessCards.length;
 const cardWidth = goodnessCards[0].offsetWidth;
 
@@ -194,64 +196,51 @@ function hidePlaceholder(input) {
   input.placeholder = '';
   var placeholderImage = document.querySelector('#placeholderImage')
   placeholderImage.style.display = "none";
+  
 }
 var animcommit = document.querySelectorAll(".bounding_h3 h3");
 var goodnessCard = document.querySelector("#card1");
-var goodnessCard2 = document.querySelector("#card2");
-var goodnessCard3 = document.querySelector("#card3");
-var goodnessCard4 = document.querySelector("#card4");
-var goodnessCard5 = document.querySelector("#card5");
-var heading = document.getElementsByClassName('.bound_h3_1');
-var circlecont = document.querySelector(".goodness_card")
-var circleanim = document.querySelector(".side_circle2")
 var animationTriggered = false; 
 
-circleanim.addEventListener("click", function(){
-  circleanim.style.backgroundColor = 'green'
-})
+function getbhai(){
+  console.log("hello world")
+}
+goodnessCards.forEach(function(card) {
+  card.addEventListener("click", function() {
+      circleanim.style.backgroundColor = 'black';
+      getbhai();
+  });
+});
+
+
 
 
 function clientComments() {
     gsap.from(animcommit, {
       y: 150,
       opacity: 0,
-      delay: 0.1, // Reduce the delay for a quicker animation
+      delay: 0.1, 
       duration: 0.4,
       stagger: 0.08,
      
     });
   }
 
-goodnessCard.addEventListener("click", clientComments);
-goodnessCard2.addEventListener("click", clientComments);
-goodnessCard3.addEventListener("click", clientComments);
-goodnessCard4.addEventListener("click", clientComments);
-goodnessCard5.addEventListener("click", clientComments);
+var connectCont = document.querySelector('##get_message')
 
+connectCont.addEventListener('click',function(){
+  connectCont.style.backgroundColor = "blue"
+  connectCont.style.marginBottom = "-180px"
+  connectCont.style.borderRadius = "25px"
+  /*   
+    .carousel_slider:hover {
+      height: 230px;
+      margin-bottom: -180px;
+      border-radius: 25px;
+    } */
 
-card2.addEventListener("click", function() {
-  card1.heading.textContent = "Hello fucker"
-  heading.textContent = 'New text for Card 2';
-  clientComments(); 
+})
 
-});
-
-card3.addEventListener("click", function() {
-  card2.heading.style.display = "none"
-
-  clientComments(); 
-
-});
-card4.addEventListener("click", function() {
-  card3.heading.style.display = "none"
-  clientComments(); // Run the animation
-
-});
-card5.addEventListener("click", function() {
-  card4.heading.style.display = "none"
-  clientComments(); // Run the animation
-
-});
 
 
 

@@ -24,12 +24,12 @@
             <a  class="links_href" href="#">Donate</a>
                 <div id="menu_btn">
                    <div class="menu_icon">
-                <a href="https://www.youtube.com/">
+                <a href="#">
                     <img src="public/menu_btn_2.png" alt="">
                 </a>
                    </div>
                    <div class="cart_icon">
-                    <a href="https://www.youtube.com/">
+                    <a href="#">
                         <img src="public/carthero.png" alt="">
                     </a>
                 </div>
@@ -183,7 +183,7 @@
           <div id="page4">
             <div class="goodness_cont">
                 <div id="card1" class="goodness_card">
-                    <div class="side_circle2"></div>
+                    <div class="side_circle2 bhai"></div>
                     <h2>m// 001 <br>Cartier.</h2>
                 </div>
                 <div id="card2" class="goodness_card">
@@ -273,7 +273,13 @@
                         <h3 class="bound_h3_3">two good co.</h3>
                     </div>
                 <div id="get_message">
-                    <h2>Sent you own messages</h2>
+                    <form id="connet_form_2">
+                        <label for="username">Name</label><br>
+                        <input id="input_connect" type="text" name="uname" id="uidentiy" placeholder="Bilal N.">
+                        <label style="font-size: small;" for="messages">Message</label>
+                        <label  style="padding-left: 55px; font-size: small;" for="max-limited">80 Characters max</label>
+                        <textarea id="comment" name="comment" rows="4" cols="180"></textarea>
+                    </form>
                 </div>
                 <h6>Sometimes it’s the smallest actions<br>
                      that can make the biggest impact.</h6>
@@ -299,7 +305,7 @@
               </div>
           </div>
           <div class="email_sec">
-            <form>
+            <form id="email_form">
                 <img src="public/sign-6.png" alt="" id="placeholderImage"onfocus="hidePlaceholder(this)" >
                 <input type="email" id="radioInput1" name="radio"placeholder="Enter Your Email Address For Good" onfocus="hidePlaceholder(this)">
                 <i id="sent_icon" class="ri-arrow-right-line"></i>
